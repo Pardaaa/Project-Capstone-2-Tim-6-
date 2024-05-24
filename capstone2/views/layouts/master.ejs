@@ -22,10 +22,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
-        <% include('navbar.ejs') %>
+        <%- include('navbar.ejs') %>
             <!-- Content Wrapper -->
             <!-- /.content-wrapper -->
-            <!-- Footer, dll. -->
+            <%- include('sidebar.ejs') %>
+                <!-- Footer, dll. -->
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
