@@ -7,4 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.listen(8000, () => console.log('Running...'))
+app.set('view engine', 'ejs');
+
+// Rute untuk halaman user
+app.get('/user', (req, res) => {
+    res.render('layouts/master');
+});
+
+const port = 8000
+app.listen({ port }, () => console.log(`Running in port ${port}`))
