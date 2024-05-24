@@ -23,12 +23,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
         <!-- Navbar -->
         <%- include('navbar.ejs') %>
-            <!-- Content Wrapper -->
-            <!-- /.content-wrapper -->
+            <!-- Sidebar -->
             <%- include('sidebar.ejs') %>
-                <!-- Footer, dll. -->
+                <!-- Content Wrapper -->
+                <div class="content-wrapper">
+                    <%- body %>
+                </div>
+                <!-- /.content-wrapper -->
+                <!-- Footer -->
+                <%- include('footer') %>
     </div>
-    <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
     <!-- Include JavaScript -->
 
