@@ -20,9 +20,13 @@ app.use(expressLayouts);
 app.set('layout', 'layouts/master');
 
 // Rute untuk halaman user
-app.get('/user', (req, res) => {
-    res.render('index');
+app.get('/', (req, res) => {
+    res.render('login/login', { layout: false });
 });
+app.get('/forget', (req, res) => {
+    res.render('login/forgetPass', { layout: false });
+});
+
 
 const port = 8000
 app.listen({ port }, () => console.log(`Running in port ${port}`))
